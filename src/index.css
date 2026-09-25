@@ -1,0 +1,714 @@
+@import "tailwindcss";
+
+@layer base {
+  /* ==========================================================================
+     ADVANCED LIQUID GLASS DESIGN SYSTEM - THEME TOKENS
+     Base: Pitch Deep Black (#000000) with Fluid Specular Reflections & Caustics
+     ========================================================================== */
+
+  /* 1. Neon Mint Theme (Default) */
+  :root,
+  body,
+  body.theme-neon-mint {
+    --bg-canvas: #000000;
+    --bg-mesh: radial-gradient(at 18% 18%, rgba(16, 185, 129, 0.12) 0px, transparent 50%),
+               radial-gradient(at 82% 82%, rgba(0, 245, 160, 0.07) 0px, transparent 55%),
+               radial-gradient(at 50% 50%, rgba(8, 24, 18, 0.45) 0px, transparent 75%);
+
+    --bg-surface: rgba(255, 255, 255, 0.032);
+    --bg-surface-elevated: rgba(255, 255, 255, 0.065);
+    --bg-surface-hover: rgba(255, 255, 255, 0.075);
+    --bg-glass: rgba(10, 16, 13, 0.68);
+
+    --border-subtle: rgba(255, 255, 255, 0.10);
+    --border-strong: rgba(255, 255, 255, 0.22);
+    --border-glass: rgba(255, 255, 255, 0.14);
+    --border-highlight: rgba(255, 255, 255, 0.32);
+
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --accent-primary: #10b981;
+    --accent-secondary: #00f5a0;
+    --accent-hover: #059669;
+    --accent-contrast: #000000;
+    --accent-subtle: rgba(16, 185, 129, 0.16);
+    --accent-glow: 0 0 32px rgba(16, 185, 129, 0.36);
+    --accent-border-glow: rgba(16, 185, 129, 0.55);
+
+    --sidebar-bg: rgba(6, 8, 7, 0.74);
+    --sidebar-border: rgba(255, 255, 255, 0.09);
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #64748b;
+    --sidebar-active-bg: rgba(16, 185, 129, 0.18);
+    --sidebar-active-text: #10b981;
+
+    --card-pastel-1: rgba(16, 185, 129, 0.09);
+    --card-pastel-1-text: #34d399;
+    --card-pastel-1-sub: #10b981;
+
+    --card-pastel-2: rgba(56, 189, 248, 0.09);
+    --card-pastel-2-text: #38bdf8;
+    --card-pastel-2-sub: #0ea5e9;
+
+    --card-pastel-3: rgba(168, 85, 247, 0.09);
+    --card-pastel-3-text: #c084fc;
+    --card-pastel-3-sub: #a855f7;
+
+    --card-pastel-4: rgba(251, 191, 36, 0.09);
+    --card-pastel-4-text: #fbbf24;
+    --card-pastel-4-sub: #f59e0b;
+
+    --progress-track: rgba(255, 255, 255, 0.08);
+    --progress-fill-1: #10b981;
+    --progress-fill-2: #00f5a0;
+    --progress-fill-3: #38bdf8;
+    --progress-fill-4: #a855f7;
+
+    /* Complex Liquid Specular Shadows */
+    --shadow-soft: 0 14px 34px -8px rgba(0, 0, 0, 0.75), 0 0 24px -6px var(--accent-subtle);
+    --shadow-card: 0 20px 48px -12px rgba(0, 0, 0, 0.85),
+                   0 0 32px -8px var(--accent-subtle),
+                   inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.40),
+                   inset 3px 3px 14px -2px rgba(255, 255, 255, 0.12),
+                   inset -2px -3px 16px -4px rgba(0, 0, 0, 0.65);
+    --shadow-card-hover: 0 24px 56px -10px rgba(0, 0, 0, 0.95),
+                         0 0 42px -4px var(--accent-subtle),
+                         inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.60),
+                         inset 4px 4px 18px -2px rgba(255, 255, 255, 0.18),
+                         inset -2px -3px 18px -4px rgba(0, 0, 0, 0.75);
+    --shadow-dropdown: 0 28px 70px -15px rgba(0, 0, 0, 0.98),
+                       0 0 48px -5px rgba(0, 0, 0, 0.8),
+                       inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.45);
+  }
+
+  /* 2. Cyberpunk: Neon Pink & Cyan */
+  body.theme-cyberpunk {
+    --bg-canvas: #000000;
+    --bg-mesh: radial-gradient(at 18% 18%, rgba(255, 0, 127, 0.14) 0px, transparent 50%),
+               radial-gradient(at 82% 82%, rgba(0, 240, 255, 0.11) 0px, transparent 55%),
+               radial-gradient(at 50% 50%, rgba(28, 8, 24, 0.50) 0px, transparent 75%);
+
+    --bg-surface: rgba(255, 255, 255, 0.035);
+    --bg-surface-elevated: rgba(255, 255, 255, 0.068);
+    --bg-surface-hover: rgba(255, 255, 255, 0.082);
+    --bg-glass: rgba(18, 10, 16, 0.70);
+
+    --border-subtle: rgba(255, 255, 255, 0.10);
+    --border-strong: rgba(255, 0, 128, 0.40);
+    --border-glass: rgba(255, 255, 255, 0.14);
+    --border-highlight: rgba(255, 0, 128, 0.50);
+
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --accent-primary: #ff007f;
+    --accent-secondary: #00f0ff;
+    --accent-hover: #e6006f;
+    --accent-contrast: #ffffff;
+    --accent-subtle: rgba(255, 0, 127, 0.18);
+    --accent-glow: 0 0 34px rgba(255, 0, 127, 0.42);
+    --accent-border-glow: rgba(255, 0, 127, 0.60);
+
+    --sidebar-bg: rgba(10, 6, 9, 0.76);
+    --sidebar-border: rgba(255, 255, 255, 0.09);
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #64748b;
+    --sidebar-active-bg: rgba(255, 0, 127, 0.20);
+    --sidebar-active-text: #ff007f;
+
+    --card-pastel-1: rgba(255, 0, 127, 0.10);
+    --card-pastel-1-text: #ff66b2;
+    --card-pastel-1-sub: #ff007f;
+
+    --card-pastel-2: rgba(0, 240, 255, 0.10);
+    --card-pastel-2-text: #38e1ff;
+    --card-pastel-2-sub: #00f0ff;
+
+    --card-pastel-3: rgba(192, 132, 252, 0.10);
+    --card-pastel-3-text: #d8b4fe;
+    --card-pastel-3-sub: #c084fc;
+
+    --card-pastel-4: rgba(250, 204, 21, 0.10);
+    --card-pastel-4-text: #fde047;
+    --card-pastel-4-sub: #facc15;
+
+    --progress-track: rgba(255, 255, 255, 0.08);
+    --progress-fill-1: #ff007f;
+    --progress-fill-2: #00f0ff;
+    --progress-fill-3: #c084fc;
+    --progress-fill-4: #facc15;
+
+    --shadow-soft: 0 14px 34px -8px rgba(0, 0, 0, 0.8), 0 0 26px -5px var(--accent-subtle);
+    --shadow-card: 0 20px 48px -12px rgba(0, 0, 0, 0.9),
+                   0 0 36px -8px var(--accent-subtle),
+                   inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.42),
+                   inset 3px 3px 14px -2px rgba(255, 255, 255, 0.14),
+                   inset -2px -3px 16px -4px rgba(0, 0, 0, 0.7);
+    --shadow-card-hover: 0 24px 56px -10px rgba(0, 0, 0, 0.98),
+                         0 0 44px -4px var(--accent-subtle),
+                         inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.65),
+                         inset 4px 4px 18px -2px rgba(255, 255, 255, 0.20),
+                         inset -2px -3px 18px -4px rgba(0, 0, 0, 0.8);
+    --shadow-dropdown: 0 28px 70px -15px rgba(0, 0, 0, 0.98),
+                       inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.45);
+  }
+
+  /* 3. M-Sport Theme */
+  body.theme-m-sport {
+    --bg-canvas: #000000;
+    --bg-mesh: radial-gradient(at 18% 18%, rgba(0, 102, 177, 0.16) 0px, transparent 50%),
+               radial-gradient(at 82% 82%, rgba(224, 0, 0, 0.10) 0px, transparent 55%),
+               radial-gradient(at 50% 50%, rgba(8, 16, 26, 0.50) 0px, transparent 75%);
+
+    --bg-surface: rgba(255, 255, 255, 0.035);
+    --bg-surface-elevated: rgba(255, 255, 255, 0.068);
+    --bg-surface-hover: rgba(255, 255, 255, 0.082);
+    --bg-glass: rgba(10, 14, 20, 0.70);
+
+    --border-subtle: rgba(255, 255, 255, 0.10);
+    --border-strong: rgba(0, 102, 177, 0.45);
+    --border-glass: rgba(255, 255, 255, 0.14);
+    --border-highlight: rgba(56, 189, 248, 0.45);
+
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --accent-primary: #0066b1;
+    --accent-secondary: #e00000;
+    --accent-hover: #00508c;
+    --accent-contrast: #ffffff;
+    --accent-subtle: rgba(0, 102, 177, 0.20);
+    --accent-glow: 0 0 34px rgba(0, 102, 177, 0.40);
+    --accent-border-glow: rgba(0, 102, 177, 0.60);
+
+    --sidebar-bg: rgba(6, 8, 12, 0.76);
+    --sidebar-border: rgba(255, 255, 255, 0.09);
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #64748b;
+    --sidebar-active-bg: rgba(0, 102, 177, 0.22);
+    --sidebar-active-text: #38bdf8;
+
+    --card-pastel-1: rgba(0, 102, 177, 0.11);
+    --card-pastel-1-text: #60a5fa;
+    --card-pastel-1-sub: #0066b1;
+
+    --card-pastel-2: rgba(224, 0, 0, 0.10);
+    --card-pastel-2-text: #f87171;
+    --card-pastel-2-sub: #e00000;
+
+    --card-pastel-3: rgba(2, 132, 199, 0.10);
+    --card-pastel-3-text: #38bdf8;
+    --card-pastel-3-sub: #0284c7;
+
+    --card-pastel-4: rgba(148, 163, 184, 0.09);
+    --card-pastel-4-text: #cbd5e1;
+    --card-pastel-4-sub: #94a3b8;
+
+    --progress-track: rgba(255, 255, 255, 0.08);
+    --progress-fill-1: #0066b1;
+    --progress-fill-2: #e00000;
+    --progress-fill-3: #38bdf8;
+    --progress-fill-4: #60a5fa;
+
+    --shadow-soft: 0 14px 34px -8px rgba(0, 0, 0, 0.8), 0 0 26px -5px var(--accent-subtle);
+    --shadow-card: 0 20px 48px -12px rgba(0, 0, 0, 0.9),
+                   0 0 36px -8px var(--accent-subtle),
+                   inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.42),
+                   inset 3px 3px 14px -2px rgba(255, 255, 255, 0.14),
+                   inset -2px -3px 16px -4px rgba(0, 0, 0, 0.7);
+    --shadow-card-hover: 0 24px 56px -10px rgba(0, 0, 0, 0.98),
+                         0 0 44px -4px var(--accent-subtle),
+                         inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.65),
+                         inset 4px 4px 18px -2px rgba(255, 255, 255, 0.20),
+                         inset -2px -3px 18px -4px rgba(0, 0, 0, 0.8);
+    --shadow-dropdown: 0 28px 70px -15px rgba(0, 0, 0, 0.98),
+                       inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.45);
+  }
+
+  /* 4. Sunset Theme */
+  body.theme-sunset {
+    --bg-canvas: #000000;
+    --bg-mesh: radial-gradient(at 18% 18%, rgba(255, 94, 54, 0.15) 0px, transparent 50%),
+               radial-gradient(at 82% 82%, rgba(255, 162, 0, 0.10) 0px, transparent 55%),
+               radial-gradient(at 50% 50%, rgba(26, 12, 8, 0.50) 0px, transparent 75%);
+
+    --bg-surface: rgba(255, 255, 255, 0.035);
+    --bg-surface-elevated: rgba(255, 255, 255, 0.068);
+    --bg-surface-hover: rgba(255, 255, 255, 0.082);
+    --bg-glass: rgba(16, 12, 10, 0.70);
+
+    --border-subtle: rgba(255, 255, 255, 0.10);
+    --border-strong: rgba(255, 94, 54, 0.40);
+    --border-glass: rgba(255, 255, 255, 0.14);
+    --border-highlight: rgba(255, 162, 0, 0.45);
+
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --accent-primary: #ff5e36;
+    --accent-secondary: #ffa200;
+    --accent-hover: #e04b24;
+    --accent-contrast: #ffffff;
+    --accent-subtle: rgba(255, 94, 54, 0.18);
+    --accent-glow: 0 0 34px rgba(255, 94, 54, 0.40);
+    --accent-border-glow: rgba(255, 94, 54, 0.60);
+
+    --sidebar-bg: rgba(8, 6, 5, 0.76);
+    --sidebar-border: rgba(255, 255, 255, 0.09);
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #64748b;
+    --sidebar-active-bg: rgba(255, 94, 54, 0.20);
+    --sidebar-active-text: #ff7a59;
+
+    --card-pastel-1: rgba(255, 94, 54, 0.10);
+    --card-pastel-1-text: #ff8c69;
+    --card-pastel-1-sub: #ff5e36;
+
+    --card-pastel-2: rgba(255, 162, 0, 0.10);
+    --card-pastel-2-text: #fcd34d;
+    --card-pastel-2-sub: #ffa200;
+
+    --card-pastel-3: rgba(236, 72, 153, 0.10);
+    --card-pastel-3-text: #f472b6;
+    --card-pastel-3-sub: #ec4899;
+
+    --card-pastel-4: rgba(249, 115, 22, 0.10);
+    --card-pastel-4-text: #fdba74;
+    --card-pastel-4-sub: #f97316;
+
+    --progress-track: rgba(255, 255, 255, 0.08);
+    --progress-fill-1: #ff5e36;
+    --progress-fill-2: #ffa200;
+    --progress-fill-3: #f472b6;
+    --progress-fill-4: #fb923c;
+
+    --shadow-soft: 0 14px 34px -8px rgba(0, 0, 0, 0.8), 0 0 26px -5px var(--accent-subtle);
+    --shadow-card: 0 20px 48px -12px rgba(0, 0, 0, 0.9),
+                   0 0 36px -8px var(--accent-subtle),
+                   inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.42),
+                   inset 3px 3px 14px -2px rgba(255, 255, 255, 0.14),
+                   inset -2px -3px 16px -4px rgba(0, 0, 0, 0.7);
+    --shadow-card-hover: 0 24px 56px -10px rgba(0, 0, 0, 0.98),
+                         0 0 44px -4px var(--accent-subtle),
+                         inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.65),
+                         inset 4px 4px 18px -2px rgba(255, 255, 255, 0.20),
+                         inset -2px -3px 18px -4px rgba(0, 0, 0, 0.8);
+    --shadow-dropdown: 0 28px 70px -15px rgba(0, 0, 0, 0.98),
+                       inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.45);
+  }
+
+  /* 5. Monochrome Theme */
+  body.theme-monochrome {
+    --bg-canvas: #000000;
+    --bg-mesh: radial-gradient(at 18% 18%, rgba(255, 255, 255, 0.10) 0px, transparent 50%),
+               radial-gradient(at 82% 82%, rgba(255, 255, 255, 0.05) 0px, transparent 55%),
+               radial-gradient(at 50% 50%, rgba(16, 16, 16, 0.55) 0px, transparent 75%);
+
+    --bg-surface: rgba(255, 255, 255, 0.038);
+    --bg-surface-elevated: rgba(255, 255, 255, 0.075);
+    --bg-surface-hover: rgba(255, 255, 255, 0.095);
+    --bg-glass: rgba(14, 14, 14, 0.75);
+
+    --border-subtle: rgba(255, 255, 255, 0.12);
+    --border-strong: rgba(255, 255, 255, 0.38);
+    --border-glass: rgba(255, 255, 255, 0.16);
+    --border-highlight: rgba(255, 255, 255, 0.45);
+
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+
+    --accent-primary: #ffffff;
+    --accent-secondary: #e2e8f0;
+    --accent-hover: #f1f5f9;
+    --accent-contrast: #000000;
+    --accent-subtle: rgba(255, 255, 255, 0.16);
+    --accent-glow: 0 0 32px rgba(255, 255, 255, 0.35);
+    --accent-border-glow: rgba(255, 255, 255, 0.65);
+
+    --sidebar-bg: rgba(6, 6, 6, 0.80);
+    --sidebar-border: rgba(255, 255, 255, 0.10);
+    --sidebar-text: #ffffff;
+    --sidebar-text-muted: #737373;
+    --sidebar-active-bg: rgba(255, 255, 255, 0.18);
+    --sidebar-active-text: #ffffff;
+
+    --card-pastel-1: rgba(255, 255, 255, 0.09);
+    --card-pastel-1-text: #ffffff;
+    --card-pastel-1-sub: #cbd5e1;
+
+    --card-pastel-2: rgba(255, 255, 255, 0.08);
+    --card-pastel-2-text: #e2e8f0;
+    --card-pastel-2-sub: #cbd5e1;
+
+    --card-pastel-3: rgba(255, 255, 255, 0.07);
+    --card-pastel-3-text: #cbd5e1;
+    --card-pastel-3-sub: #94a3b8;
+
+    --card-pastel-4: rgba(255, 255, 255, 0.085);
+    --card-pastel-4-text: #f8fafc;
+    --card-pastel-4-sub: #cbd5e1;
+
+    --progress-track: rgba(255, 255, 255, 0.10);
+    --progress-fill-1: #ffffff;
+    --progress-fill-2: #e2e8f0;
+    --progress-fill-3: #cbd5e1;
+    --progress-fill-4: #94a3b8;
+
+    --shadow-soft: 0 14px 34px -8px rgba(0, 0, 0, 0.85), 0 0 26px -5px rgba(255, 255, 255, 0.12);
+    --shadow-card: 0 20px 48px -12px rgba(0, 0, 0, 0.95),
+                   0 0 36px -8px rgba(255, 255, 255, 0.12),
+                   inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.48),
+                   inset 3px 3px 14px -2px rgba(255, 255, 255, 0.16),
+                   inset -2px -3px 16px -4px rgba(0, 0, 0, 0.75);
+    --shadow-card-hover: 0 24px 56px -10px rgba(0, 0, 0, 1),
+                         0 0 44px -4px rgba(255, 255, 255, 0.22),
+                         inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.70),
+                         inset 4px 4px 18px -2px rgba(255, 255, 255, 0.24),
+                         inset -2px -3px 18px -4px rgba(0, 0, 0, 0.85);
+    --shadow-dropdown: 0 28px 70px -15px rgba(0, 0, 0, 1),
+                       inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.50);
+  }
+
+  /* Body: Deep Black Base with Ambient Caustics */
+  body {
+    background-color: var(--bg-canvas) !important;
+    background-image: var(--bg-mesh);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    transition: background 0.4s ease, color 0.25s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+}
+
+/* ==========================================================================
+   LIQUID GLASS KEYFRAME ANIMATIONS
+   Fluid Border-Radius Morphing & Specular Surface Caustics
+   ========================================================================== */
+
+/* 1. Subtle, continuous organic morphing for large liquid panels */
+@keyframes liquidMorphSlow {
+  0% {
+    border-radius: 26px 22px 28px 24px / 24px 28px 22px 26px;
+  }
+  33% {
+    border-radius: 22px 28px 24px 26px / 28px 22px 26px 24px;
+  }
+  66% {
+    border-radius: 28px 24px 22px 28px / 22px 26px 28px 22px;
+  }
+  100% {
+    border-radius: 26px 22px 28px 24px / 24px 28px 22px 26px;
+  }
+}
+
+/* 2. Fluid morphing for floating widgets, icons, launcher buttons */
+@keyframes liquidBlob {
+  0% {
+    border-radius: 60% 40% 55% 45% / 48% 52% 48% 52%;
+  }
+  33% {
+    border-radius: 52% 48% 62% 38% / 54% 46% 54% 46%;
+  }
+  66% {
+    border-radius: 46% 54% 42% 58% / 44% 56% 44% 56%;
+  }
+  100% {
+    border-radius: 60% 40% 55% 45% / 48% 52% 48% 52%;
+  }
+}
+
+/* 3. Traveling watery refraction sheen */
+@keyframes liquidSheen {
+  0% {
+    background-position: -200% -200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* ==========================================================================
+   LIQUID GLASS COMPONENT STYLES
+   Wet Reflections, Watery Translucency, Specular Meniscus
+   ========================================================================== */
+
+/* 1. Liquid Glass Panels (Dashboard Cards, Overview Widgets, Daily Digest) */
+.glass-panel,
+[style*="var(--bg-surface)"] {
+  position: relative;
+  background: radial-gradient(
+    130% 130% at 20% 0%,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.025) 45%,
+    rgba(0, 0, 0, 0.35) 100%
+  ) !important;
+  backdrop-filter: blur(20px) saturate(150%) contrast(105%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%) contrast(105%);
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: var(--shadow-card);
+  animation: liquidMorphSlow 18s ease-in-out infinite alternate;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform, border-radius, box-shadow;
+}
+
+/* Watery interactive hover reaction */
+.glass-panel:hover,
+[style*="var(--bg-surface)"]:hover {
+  background: radial-gradient(
+    130% 130% at 25% 0%,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  ) !important;
+  border-color: var(--border-highlight) !important;
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px) scale(1.008);
+}
+
+/* 2. Interactive Liquid Cards (Tasks, Milestones, Subject Items, Topic Cards) */
+.glass-card {
+  position: relative;
+  background: radial-gradient(
+    120% 120% at 15% 0%,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 55%,
+    rgba(0, 0, 0, 0.25) 100%
+  ) !important;
+  backdrop-filter: blur(18px) saturate(145%);
+  -webkit-backdrop-filter: blur(18px) saturate(145%);
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 20px 16px 18px 15px / 16px 19px 15px 18px;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.6),
+              inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.35),
+              inset 2px 2px 10px -2px rgba(255, 255, 255, 0.08),
+              inset -2px -2px 12px -2px rgba(0, 0, 0, 0.5);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background 0.3s ease,
+              border-color 0.3s ease,
+              border-radius 0.45s ease,
+              box-shadow 0.45s ease;
+  will-change: transform, border-radius;
+}
+
+.glass-card:hover {
+  background: radial-gradient(
+    120% 120% at 20% 0%,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.045) 55%,
+    rgba(0, 0, 0, 0.3) 100%
+  ) !important;
+  border-color: var(--border-highlight) !important;
+  border-radius: 16px 20px 15px 19px / 19px 15px 18px 16px;
+  transform: translateY(-3px) scale(1.015);
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.85),
+              0 0 28px -4px var(--accent-subtle),
+              inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.65),
+              inset 3px 3px 14px -2px rgba(255, 255, 255, 0.16),
+              inset -2px -2px 14px -2px rgba(0, 0, 0, 0.6);
+}
+
+/* 3. Liquid Floating Sidebar */
+.glass-sidebar {
+  background: radial-gradient(
+    140% 100% at 0% 0%,
+    rgba(255, 255, 255, 0.05) 0%,
+    var(--sidebar-bg) 60%
+  ) !important;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-right: 1px solid var(--sidebar-border) !important;
+  box-shadow: 8px 0 40px rgba(0, 0, 0, 0.9),
+              inset 1.5px 0 2px 0px rgba(255, 255, 255, 0.30),
+              inset -1px 0 0 rgba(255, 255, 255, 0.06);
+}
+
+/* 4. Liquid Sticky Navbar */
+.glass-nav {
+  background: radial-gradient(
+    100% 150% at 50% 0%,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(0, 0, 0, 0.72) 100%
+  ) !important;
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border-bottom: 1px solid var(--border-subtle) !important;
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.85),
+              inset 0 1.5px 2px 0px rgba(255, 255, 255, 0.35);
+}
+
+/* 5. Fluid AI Chat Window & Morphing Liquid Launcher */
+.glass-chat {
+  background: radial-gradient(
+    130% 130% at 30% 0%,
+    rgba(255, 255, 255, 0.10) 0%,
+    rgba(10, 10, 14, 0.85) 60%
+  ) !important;
+  backdrop-filter: blur(26px) saturate(190%);
+  -webkit-backdrop-filter: blur(26px) saturate(190%);
+  border: 1px solid var(--border-strong) !important;
+  border-radius: 28px 24px 30px 24px / 26px 30px 24px 28px;
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.98),
+              var(--accent-glow),
+              inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.45),
+              inset 3px 4px 16px -2px rgba(255, 255, 255, 0.16),
+              inset -3px -4px 20px -3px rgba(0, 0, 0, 0.8);
+  animation: liquidMorphSlow 14s ease-in-out infinite alternate;
+}
+
+/* Morphing Liquid Drop Launcher Button */
+.glass-chat-launcher {
+  background: radial-gradient(
+    120% 120% at 25% 15%,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.06) 40%,
+    rgba(12, 12, 16, 0.88) 100%
+  ) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid var(--accent-border-glow) !important;
+  border-radius: 54% 46% 58% 42% / 46% 58% 42% 54%;
+  box-shadow: var(--shadow-card),
+              var(--accent-glow),
+              inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.65),
+              inset 2px 2px 10px 0px rgba(255, 255, 255, 0.2);
+  animation: liquidBlob 8s ease-in-out infinite alternate;
+  transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.glass-chat-launcher:hover {
+  background: radial-gradient(
+    120% 120% at 25% 15%,
+    rgba(255, 255, 255, 0.32) 0%,
+    rgba(255, 255, 255, 0.10) 40%,
+    rgba(16, 16, 22, 0.95) 100%
+  ) !important;
+  border-color: var(--accent-primary) !important;
+  transform: translateY(-3px) scale(1.08) rotate(2deg);
+  box-shadow: 0 20px 45px -8px rgba(0, 0, 0, 0.9),
+              0 0 38px var(--accent-border-glow),
+              inset 2px 2px 2px 0px #ffffff;
+}
+
+/* 6. Liquid Buttons & Interactive Triggers */
+.glass-button {
+  position: relative;
+  background: radial-gradient(
+    120% 120% at 20% 0%,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.04) 55%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px 14px 15px 13px / 14px 16px 13px 15px;
+  color: var(--text-primary);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4),
+              inset 1.5px 1.5px 1.5px 0px rgba(255, 255, 255, 0.35);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.glass-button:hover {
+  background: radial-gradient(
+    120% 120% at 20% 0%,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.06) 55%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  border-color: var(--border-highlight);
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.02);
+  border-radius: 14px 16px 13px 15px / 16px 14px 15px 13px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6),
+              inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.55);
+}
+
+.glass-button-primary {
+  background: var(--accent-primary) !important;
+  color: var(--accent-contrast) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 16px 14px 15px 13px / 14px 16px 13px 15px;
+  box-shadow: var(--accent-glow),
+              inset 1.5px 1.5px 2px 0px rgba(255, 255, 255, 0.45);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.glass-button-primary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 38px var(--accent-border-glow),
+              0 10px 28px rgba(0, 0, 0, 0.6),
+              inset 1.5px 1.5px 2px 0px #ffffff;
+}
+
+/* 7. Liquid Input Fields */
+.glass-input {
+  background: radial-gradient(
+    110% 110% at 10% 0%,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  ) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 14px;
+  color: #ffffff !important;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.15),
+              inset 0 3px 6px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-input:focus {
+  border-color: var(--accent-primary) !important;
+  box-shadow: 0 0 0 2px var(--accent-subtle),
+              inset 1px 1px 2px 0px rgba(255, 255, 255, 0.25),
+              inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+/* Typography & Transition Utilities */
+.tabular-data {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.015em;
+}
+
+.theme-transition {
+  transition: border-color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              color 0.25s ease,
+              box-shadow 0.35s ease,
+              background 0.35s ease;
+}
+
+/* Sleek Liquid Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-primary);
+}

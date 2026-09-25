@@ -1,0 +1,8 @@
+{
+  "name": "Horizon — Goal Planner & Syllabus Tracker",
+  "description": "An advanced, minimal, and aesthetic Goal Planner & Syllabus Tracker with LocalStorage persistence, Preview Mode, and Black-Base themes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
